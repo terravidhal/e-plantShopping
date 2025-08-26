@@ -1,0 +1,399 @@
+Tâche 6 : Configurer le magasin global
+
+    Naviguez vers le fichier main.jsx dans le dossier src.
+
+    Le composant Provider de la bibliothèque react-redux est déjà importé. Ce composant permet à tous les composants de l’application d’accéder au magasin Redux.
+
+    1
+
+    import { Provider } from 'react-redux';
+
+
+          
+
+            
+
+    Le magasin Redux est importé du fichier store.js. Ce magasin contient l’état de l’application, en utilisant le réducteur défini dans le fichier CartSlice.jsx.
+
+    1
+
+    import store from './store.js';
+
+
+          
+
+            
+
+    Le composant App est enveloppé par le composant Provider, avec le magasin Redux passé en tant que prop. Cela permet à tous les composants de l’application d’accéder et d’interagir avec l’état global géré par Redux.
+
+    1
+    2
+    3
+
+    <Provider store={store}>
+      <App />
+    </Provider>
+
+
+          
+
+            
+
+    Déployer votre application avec GitHub Pages
+
+Déployer en utilisant GitHub Pages
+
+    Pour déployer votre application react sur GitHub, vous devez installer gh-pages. Cela vous permet de l’utiliser comme un outil pour déployer votre projet sur GitHub Pages. Exécutez la commande donnée dans le terminal.
+
+        1
+        npm install gh-pages --save-dev
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+    Ajoutez les lignes données avant "build": "vite build" dans le fichier package.json.
+
+        1
+        2
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist",
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+    Ensuite, dans le fichier vite.config.js, ajoutez cette ligne avant plugins : [react()]
+
+        1
+        base: "/VOTRE_NOM_DE_DÉPÔT",
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+    Remarque : Au lieu de <VOTRE_NOM_DE_DÉPÔT>, écrivez votre propre nom de dépôt, par exemple, si le nom de votre dépôt GitHub est learning_react, cela devrait ressembler à base: "/learning_react".
+
+    Maintenant, exécutez la commande de déploiement dans le terminal pour exécuter le script “deploy” défini dans le fichier package.json, déployant le projet sur GitHub Pages à l’aide de l’outil gh-pages.
+
+        1
+        npm run deploy
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+Remarque : Chaque fois que vous apportez une modification à votre code, vous devez enregistrer tous vos fichiers et exécuter des commandes git pour eux.
+
+    Exécutez les commandes git add et git commit pour mettre à jour les modifications dans votre code. Ensuite, exécutez la commande git push pour mettre à jour votre dépôt GitHub pour une gestion correcte du code.
+
+    Allez sur votre dépôt GitHub. Ensuite, naviguez vers le dépôt de votre site que vous avez créé.
+
+    Sous le nom de votre dépôt, cliquez sur Settings.
+
+    Naviguez dans la barre de navigation à gauche. Dans la section Code and Automation de la barre latérale, cliquez sur Pages.
+
+    Onglet Paramètres avec Pages entouré
+
+    Vous verrez la page montrée ci-dessous. Cliquez sur le menu déroulant où vous voyez None, puis cliquez sur gh-pages, et ensuite cliquez sur le bouton Save.
+
+    Rafraîchissez votre page à nouveau, et vous verrez le lien, comme ci-dessous. Au lieu de shoppingreact, vous verrez le nom de votre dépôt GitHub.
+
+    Remarque : Si vous ne parvenez pas à voir le lien, veuillez attendre (1-2) minutes et rafraîchir la page à nouveau.
+
+    Cliquez sur le lien généré ci-dessus pour voir votre site web en direct.
+
+Ajoutez les lignes données avant "build": "vite build" dans le fichier package.json.
+
+    1
+    2
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+
+
+          
+
+            
+
+Déployer en utilisant GitHub Pages
+
+    Pour déployer votre application react sur GitHub, vous devez installer gh-pages. Cela vous permet de l’utiliser comme un outil pour déployer votre projet sur GitHub Pages. Exécutez la commande donnée dans le terminal.
+
+        1
+        npm install gh-pages --save-dev
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+    Ajoutez les lignes données avant "build": "vite build" dans le fichier package.json.
+
+        1
+        2
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist",
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+    Ensuite, dans le fichier vite.config.js, ajoutez cette ligne avant plugins : [react()]
+
+        1
+        base: "/VOTRE_NOM_DE_DÉPÔT",
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+    Remarque : Au lieu de <VOTRE_NOM_DE_DÉPÔT>, écrivez votre propre nom de dépôt, par exemple, si le nom de votre dépôt GitHub est learning_react, cela devrait ressembler à base: "/learning_react".
+
+    Maintenant, exécutez la commande de déploiement dans le terminal pour exécuter le script “deploy” défini dans le fichier package.json, déployant le projet sur GitHub Pages à l’aide de l’outil gh-pages.
+
+        1
+        npm run deploy
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+Remarque : Chaque fois que vous apportez une modification à votre code, vous devez enregistrer tous vos fichiers et exécuter des commandes git pour eux.
+
+    Exécutez les commandes git add et git commit pour mettre à jour les modifications dans votre code. Ensuite, exécutez la commande git push pour mettre à jour votre dépôt GitHub pour une gestion correcte du code.
+
+    Allez sur votre dépôt GitHub. Ensuite, naviguez vers le dépôt de votre site que vous avez créé.
+
+    Sous le nom de votre dépôt, cliquez sur Settings.
+
+    Naviguez dans la barre de navigation à gauche. Dans la section Code and Automation de la barre latérale, cliquez sur Pages.
+
+    Onglet Paramètres avec Pages entouré
+
+    Vous verrez la page montrée ci-dessous. Cliquez sur le menu déroulant où vous voyez None, puis cliquez sur gh-pages, et ensuite cliquez sur le bouton Save.
+
+    Rafraîchissez votre page à nouveau, et vous verrez le lien, comme ci-dessous. Au lieu de shoppingreact, vous verrez le nom de votre dépôt GitHub.
+
+    Remarque : Si vous ne parvenez pas à voir le lien, veuillez attendre (1-2) minutes et rafraîchir la page à nouveau.
+
+    Cliquez sur le lien généré ci-dessus pour voir votre site web en direct.
+
+Remarque : Au lieu de <VOTRE_NOM_DE_DÉPÔT>, écrivez votre propre nom de dépôt, par exemple, si le nom de votre dépôt GitHub est learning_react, cela devrait ressembler à base: "/learning_react".
+
+Maintenant, exécutez la commande de déploiement dans le terminal pour exécuter le script “deploy” défini dans le fichier package.json, déployant le projet sur GitHub Pages à l’aide de l’outil gh-pages.
+
+    1
+
+    npm run deploy
+
+
+          
+
+            
+
+Déployer en utilisant GitHub Pages
+
+    Pour déployer votre application react sur GitHub, vous devez installer gh-pages. Cela vous permet de l’utiliser comme un outil pour déployer votre projet sur GitHub Pages. Exécutez la commande donnée dans le terminal.
+
+        1
+        npm install gh-pages --save-dev
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+    Ajoutez les lignes données avant "build": "vite build" dans le fichier package.json.
+
+        1
+        2
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist",
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+    Ensuite, dans le fichier vite.config.js, ajoutez cette ligne avant plugins : [react()]
+
+        1
+        base: "/VOTRE_NOM_DE_DÉPÔT",
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+    Remarque : Au lieu de <VOTRE_NOM_DE_DÉPÔT>, écrivez votre propre nom de dépôt, par exemple, si le nom de votre dépôt GitHub est learning_react, cela devrait ressembler à base: "/learning_react".
+
+    Maintenant, exécutez la commande de déploiement dans le terminal pour exécuter le script “deploy” défini dans le fichier package.json, déployant le projet sur GitHub Pages à l’aide de l’outil gh-pages.
+
+        1
+        npm run deploy
+
+              
+
+                
+                  
+                  
+                
+                
+                  
+                  
+                
+                
+                
+              
+
+            
+
+Remarque : Chaque fois que vous apportez une modification à votre code, vous devez enregistrer tous vos fichiers et exécuter des commandes git pour eux.
+
+    Exécutez les commandes git add et git commit pour mettre à jour les modifications dans votre code. Ensuite, exécutez la commande git push pour mettre à jour votre dépôt GitHub pour une gestion correcte du code.
+
+    Allez sur votre dépôt GitHub. Ensuite, naviguez vers le dépôt de votre site que vous avez créé.
+
+    Sous le nom de votre dépôt, cliquez sur Settings.
+
+    Naviguez dans la barre de navigation à gauche. Dans la section Code and Automation de la barre latérale, cliquez sur Pages.
+
+    Onglet Paramètres avec Pages entouré
+
+    Vous verrez la page montrée ci-dessous. Cliquez sur le menu déroulant où vous voyez None, puis cliquez sur gh-pages, et ensuite cliquez sur le bouton Save.
+
+    Rafraîchissez votre page à nouveau, et vous verrez le lien, comme ci-dessous. Au lieu de shoppingreact, vous verrez le nom de votre dépôt GitHub.
+
+    Remarque : Si vous ne parvenez pas à voir le lien, veuillez attendre (1-2) minutes et rafraîchir la page à nouveau.
+
+    Cliquez sur le lien généré ci-dessus pour voir votre site web en direct.
+
